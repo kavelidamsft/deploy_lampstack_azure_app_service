@@ -58,11 +58,12 @@ runs:
       with:
         subscriptionId: ${{ inputs.subscription-id }}
         resourceGroupName: ${{ inputs.resource-group-name }}
-        template: https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/application-workloads/wordpress/wordpress-single-vm-ubuntu/azuredeploy.json
-        parameters: https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/application-workloads/wordpress/wordpress-single-vm-ubuntu/azuredeploy.parameters.json
+        template: https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/demos/lamp-app/azuredeploy.json
+        parameters: https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/demos/lamp-app/azuredeploy.parameters.json
                     mySqlPassword=${{ inputs.admin-password }}
                     adminPasswordOrKey=${{ inputs.admin-password }}
-                    vmDnsName=my-dns-name2
+                    storageAccountNamePrefix=${{lampappsa}}
+                    # vmDnsName=my-dns-name2
                     adminUsername=${{inputs.admin-username}}
         failOnStdErr: false
 
