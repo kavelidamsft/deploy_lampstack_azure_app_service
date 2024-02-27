@@ -63,6 +63,7 @@ runs:
                     mySqlPassword=${{ inputs.admin-password }}
                     adminPasswordOrKey=${{ inputs.admin-password }}
                     storageAccountNamePrefix=lampappsa
+                    dnsLabelPrefix=dnslabelvm
                     adminUsername=${{inputs.admin-username}}
         failOnStdErr: false
 
