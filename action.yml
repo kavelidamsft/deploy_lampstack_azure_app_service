@@ -60,13 +60,15 @@ runs:
         resourceGroupName: ${{ inputs.resource-group-name }}
         template: https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/demos/lamp-app/azuredeploy.json
         parameters: https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/demos/lamp-app/azuredeploy.parameters.json
+                    authenticationType=password
                     mySqlPassword=${{ inputs.admin-password }}
                     storageAccountNamePrefix=lampappsa
                     dnsLabelPrefix=dnslabelvm
-                    adminPasswordOrKey=ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDThtLKxBDbR/DvU6+6nkJBZWcdh/dY8XY3sTO3UHn6q4p6QqxoTzE+umSmtFNU8UkLVyQ5WWLmci6xb3+7gkNfmrtIJoSyXrAVLOL6w6gzD0QVPUvGlm6fH/WzDreuxS7Dhn9NhszfXoQX3N5U4SQU22G3TdSe2QpkFKLUn9z9CWrWANbwqMJHNKfq5ANEcWLFNjBtoi9QnSYHxT6GpYkkelpkzQ4hzL8K2F/DdzUHGkGbVpuDj21Nn7DvKgdLUP5F4lh2DKEnjSBzoNKSMjC98zwazL+60ShY0GkA0SwQfPN5a1N3jpFqkZqt7b6UrPcat6IEJ4kxnf53MctMxYggX6//18OBStFFlxbWGNAdnfVwsP7GMH/OF9imMkqSUw5adeK59jZoriJ0kQw+scTzB1HDSglmf0IJoj23ALMP+zvIeWMoCOG2Vb24ImymxBQ+xNToKmWHYTwxQVLKkR+b9VBCN66o9FL+EEywUzGAPbBqj24vvJcsK7/TdnmId5U= vaibbavi sk@DESKTOP-ERTBP36
                     vmSize=Standard_D2as_v4
                     adminUsername=${{ inputs.admin-username }}
-                  # adminUsername=${{inputs.admin-username}}
+                    adminPasswordOrKey=${{inputs.admin-password}}
+                  # adminPasswordOrKey=ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDThtLKxBDbR/DvU6+6nkJBZWcdh/dY8XY3sTO3UHn6q4p6QqxoTzE+umSmtFNU8UkLVyQ5WWLmci6xb3+7gkNfmrtIJoSyXrAVLOL6w6gzD0QVPUvGlm6fH/WzDreuxS7Dhn9NhszfXoQX3N5U4SQU22G3TdSe2QpkFKLUn9z9CWrWANbwqMJHNKfq5ANEcWLFNjBtoi9QnSYHxT6GpYkkelpkzQ4hzL8K2F/DdzUHGkGbVpuDj21Nn7DvKgdLUP5F4lh2DKEnjSBzoNKSMjC98zwazL+60ShY0GkA0SwQfPN5a1N3jpFqkZqt7b6UrPcat6IEJ4kxnf53MctMxYggX6//18OBStFFlxbWGNAdnfVwsP7GMH/OF9imMkqSUw5adeK59jZoriJ0kQw+scTzB1HDSglmf0IJoj23ALMP+zvIeWMoCOG2Vb24ImymxBQ+xNToKmWHYTwxQVLKkR+b9VBCN66o9FL+EEywUzGAPbBqj24vvJcsK7/TdnmId5U= vaibbavi sk@DESKTOP-ERTBP36
+
 
         failOnStdErr: false
 
