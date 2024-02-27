@@ -23,6 +23,7 @@ jobs:
         - name: Deploy a LAMP App to Azure
           uses: ./ # Uses an action in the root directory
           with:
+            path: action.yml  # Update the path to the actual location of action1.yml
             admin-username: ${{secrets.ADMIN_USERNAME}}
             admin-password: ${{secrets.ADMIN_PASSWORD}}
             client-id: ${{ secrets.AZURE_CLIENT_ID }}
