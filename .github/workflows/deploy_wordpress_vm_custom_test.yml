@@ -1,4 +1,4 @@
-name: Workflow to deploy a LAMP App on Azure - Custom
+name: Workflow to deploy a LAMP App on Azure - Custom template
 
 on:
   workflow_dispatch:
