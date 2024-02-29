@@ -1,4 +1,4 @@
-name: 'Deploy a LAMP App to Azure'
+name: 'Deploy a LAMP App to Azure - Quickstart Template'
 description: 'This action helps create an LAMP App on Azure'
 branding:
   icon: 'play-circle'

@@ -1,12 +1,6 @@
 name: Workflow to deploy a LAMP App on Azure
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
   workflow_dispatch:
 
 permissions:
@@ -19,9 +13,9 @@ jobs:
     steps:
         - name: Checkout master
           uses: actions/checkout@v3
-          
+
         - name: Deploy a LAMP App to Azure
-          uses: ./ # Uses an action in the root directory
+          uses: ./.github/actions/custom_template
           with:
             admin-username: ${{secrets.ADMIN_USERNAME}}
             admin-password: ${{secrets.ADMIN_PASSWORD}}
