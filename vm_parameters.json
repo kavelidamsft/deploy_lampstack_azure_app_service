@@ -3,7 +3,7 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "vmDnsName": {
-      "value": "vmdnsname2"
+      "value": "newdnsname2"
     },
     "adminUsername": {
       "value": "newuser1234"
