@@ -46,11 +46,10 @@ runs:
         parameters: https://raw.githubusercontent.com/vaibbavisk20/deploy_lamp_app/main/vm_parameters.json
                     authenticationType=password
                     mySqlPassword=${{ inputs.admin-password }}
-                    storageAccountNamePrefix=lampappsa
-                    dnsLabelPrefix=dnslabelvm
-                    vmSize=Standard_D2as_v4
+                    vmDnsName=dnslabelvm
                     adminUsername=${{ inputs.admin-username }}
                     adminPasswordOrKey=${{inputs.admin-password}}
+                    location=westus2
         failOnStdErr: false
 
     - name: Fetch deployment record - Run Azure PowerShell inline script
