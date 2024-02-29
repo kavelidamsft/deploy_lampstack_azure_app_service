@@ -46,7 +46,7 @@ runs:
         parameters: https://raw.githubusercontent.com/vaibbavisk20/deploy_lamp_app/main/vm_parameters.json
                     authenticationType=password
                     mySqlPassword=${{ inputs.admin-password }}
-                    vmDnsName=dnslabelvm
+                    vmDnsName=dnslabelvm3
                     adminUsername=${{ inputs.admin-username }}
                     adminPasswordOrKey=${{inputs.admin-password}}
                     location=westus2
