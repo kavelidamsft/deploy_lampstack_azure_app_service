@@ -1,4 +1,4 @@
-name: Workflow to deploy a LAMP App on Azure - Quickstart
+name: Workflow to deploy a LAMP App on Azure - Quickstart template
 
 on:
   workflow_dispatch:
