@@ -42,8 +42,8 @@ runs:
       with:
         subscriptionId: ${{ inputs.subscription-id }}
         resourceGroupName: ${{ inputs.resource-group-name }}
-        template: https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/demos/lamp-app/azuredeploy.json
-        parameters: https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/demos/lamp-app/azuredeploy.parameters.json
+        template: https://raw.githubusercontent.com/vaibbavisk20/deploy_lamp_app/main/vm_template.json
+        parameters: https://raw.githubusercontent.com/vaibbavisk20/deploy_lamp_app/main/vm_parameters.json
                     authenticationType=password
                     mySqlPassword=${{ inputs.admin-password }}
                     storageAccountNamePrefix=lampappsa
@@ -57,5 +57,5 @@ runs:
       uses: azure/powershell@v1
       with:
         inlineScript: |
-          Get-AzResourceGroupDeploymentOperation -ResourceGroupName ${{ inputs.resource-group-name }} -DeploymentName "azuredeploy"
+          Get-AzResourceGroupDeploymentOperation -ResourceGroupName ${{ inputs.resource-group-name }} -DeploymentName "vm_template"
         azPSVersion: "latest"
