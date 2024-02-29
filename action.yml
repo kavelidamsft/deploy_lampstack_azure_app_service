@@ -69,11 +69,13 @@ runs:
                     adminPasswordOrKey=${{inputs.admin-password}}
         failOnStdErr: false
 
-    - name: Fetch deployment record
-      shell: pwsh
-      run: |
-        Get-AzResourceGroupDeploymentOperation -ResourceGroupName ${{ inputs.resource-group-name }} -DeploymentName MyUbuntuVm
-
+    - name: Fetch deployment record - Run Azure PowerShell inline script
+      uses: azure/powershell@v1
+      with:
+        inlineScript: |
+          Get-AzResourceGroupDeploymentOperation -ResourceGroupName ${{ inputs.resource-group-name }} -DeploymentName "MyUbuntuVm"
+        azPSVersion: "latest"
+    
     # - name: Print parameter value
     #   shell: bash
     #   run: |
