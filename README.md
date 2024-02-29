@@ -6,7 +6,7 @@ This GitHub Action automates the deployment of a LAMP (Linux, Apache, MySQL, PHP
 
 This template uses the Azure Linux CustomScript extension to deploy a LAMP application on Ubuntu. It creates an Ubuntu VM, does a silent install of MySQL, Apache and PHP, then creates a simple PHP script. Go to /phpinfo.php to see the deployed page.
 
-[For more information on quickstart template]([https://www.example.com](https://learn.microsoft.com/en-us/samples/azure/azure-quickstart-templates/lamp-app/))
+[For more information on quickstart template](https://learn.microsoft.com/en-us/samples/azure/azure-quickstart-templates/lamp-app/)
 
 **This documentation is for v2 of vaibbavisk20/deploy_lamp_app**
 
