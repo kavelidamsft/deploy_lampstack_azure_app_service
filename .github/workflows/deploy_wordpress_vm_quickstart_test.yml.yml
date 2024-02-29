@@ -1,12 +1,6 @@
 name: Workflow to deploy a LAMP App on Azure
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
   workflow_dispatch:
 
 permissions:
