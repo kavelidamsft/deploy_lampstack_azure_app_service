@@ -59,23 +59,3 @@ runs:
         inlineScript: |
           Get-AzResourceGroupDeploymentOperation -ResourceGroupName ${{ inputs.resource-group-name }} -DeploymentName "azuredeploy"
         azPSVersion: "latest"
-    
-    # - name: Print parameter value
-    #   shell: bash
-    #   run: |
-    #     json_file="vm_parameters.json"
-    #     # vm name
-    #     virtual_machine_name=".parameters.virtualMachineName.value"
-    #     result=$(jq -r "$virtual_machine_name" "$json_file")
-    #     echo "Virtual Machine Properties"
-    #     echo "Name: $result"
-
-    #     # region
-    #     location=".parameters.location.value"
-    #     result=$(jq -r "$location" "$json_file")
-    #     echo "Location: $result"
-
-    #     # vm size
-    #     virtual_machine_size=".parameters.virtualMachineSize.value"
-    #     result=$(jq -r "$virtual_machine_size" "$json_file")
-    #     echo "VM Size: $result"
