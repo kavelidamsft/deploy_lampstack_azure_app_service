@@ -8,7 +8,7 @@ This template uses the Azure Linux CustomScript extension to deploy a LAMP appli
 
 [For more information on this quickstart template](https://learn.microsoft.com/en-us/samples/azure/azure-quickstart-templates/lamp-app/)
 
-**This documentation is for v3 of vaibbavisk20/deploy_lamp_app**
+**This documentation is for v4 of vaibbavisk20/deploy_lamp_app**
 
 ## Inputs
 
