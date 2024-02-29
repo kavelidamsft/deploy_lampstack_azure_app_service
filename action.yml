@@ -69,11 +69,10 @@ runs:
                     adminPasswordOrKey=${{inputs.admin-password}}
         failOnStdErr: false
 
-    # - name: Fetch JSON file from remote repository
-    #   shell: bash
-    #   run: |
-    #     json_url="https://raw.githubusercontent.com/vaibbavisk20/deploy_wordpress_vm_azure/main/vm_parameters.json"
-    #     curl -sSLO $json_url
+    - name: Fetch deployment record
+      shell: pwsh
+      run: |
+        Get-AzResourceGroupDeploymentOperation -ResourceGroupName ${{ inputs.resource-group-name }} -DeploymentName MyUbuntuVm
 
     # - name: Print parameter value
     #   shell: bash
